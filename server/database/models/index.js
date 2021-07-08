@@ -8,18 +8,17 @@ const TokenModel = TokenModelBuilder(client);
 
 associate({ UserModel, TokenModel });
 //TODO refactor replace sync on migrations
-//sync models and db
 async function sync() {
   try {
-    console.log("DB sync start");
+    console.log("db sync start...");
     await client.sync({ alter: true });
-    console.log("DB sync successful");
+    console.log("db sync successful");
   } catch (e) {
     console.log(e);
   } finally {
-    console.log("DB sync finish");
+    console.log("db sync finish");
   }
 }
 sync();
-
 export { UserModel, TokenModel };
+

@@ -9,6 +9,7 @@ import { PrivateRoute, PublicRoute } from "./common";
 import { ContentPage } from "./ContentPage";
 import { NotFoundPage } from "./NotFound";
 import { Header } from "./common/Header";
+import { HomePage } from "./HomePage";
 
 
 export const App = () => {
@@ -37,6 +38,7 @@ export const App = () => {
     <div>
       {hasUser && hasToken && <Header user={user} />}
       <Switch>
+        <PublicRoute exact path={appRoute.BASE} component={HomePage} />
         <PublicRoute exact path={appRoute.LOGIN} component={LoginPage} />
         <PrivateRoute exact path={appRoute.CONTENT} component={ContentPage} />
         <PublicRoute exact path={appRoute.ANY} component={NotFoundPage} />

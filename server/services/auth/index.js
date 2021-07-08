@@ -52,7 +52,7 @@ export class AuthService {
   }
 
   async logIn({ email, password }) {
-    console.log(email, password);
+
     const candidate = await this.AuthRepository.findOneByParams({ email });
     if (!candidate) {
       throw ApiError.BadRequest("User with same email not found");
@@ -73,7 +73,7 @@ export class AuthService {
   }
 
   async logOut({ refreshToken }) {
-    console.log(refreshToken);
+
     return tokenHelper.removeToken(refreshToken);
   }
 
@@ -81,12 +81,12 @@ export class AuthService {
     const candidate = await this.AuthRepository.getUserByActivationLink(
       activationLink
     );
-    console.log(candidate);
+
     if (!candidate) {
       throw ApiError.BadRequest({ message: "Incorrect activation link" });
     }
     const user = { ...candidate, activated: true };
-    console.log(user.id, user);
+
     const response = await this.AuthRepository.updateById(user.id, user);
     if (!response) {
       throw new Error("Api error");
@@ -97,7 +97,7 @@ export class AuthService {
 
 
   async refresh({ refreshToken }) {
-    console.log(refreshToken);
+
     if (!refreshToken) {
       throw ApiError.UnathorizedError();
     }

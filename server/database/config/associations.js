@@ -1,5 +1,4 @@
 export function associate(models) {
-  console.log(models);
   const { UserModel, TokenModel } = models;
   UserModel.hasOne(TokenModel, {
     foreignKey: {

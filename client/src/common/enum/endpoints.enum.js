@@ -5,7 +5,7 @@ export const endpointEnum = Object.freeze({
   LOGOUT: "/auth/logout",
   REFRESH_TOKEN:"/auth/refresh",
   //Users
-  GET_ALL_USERS:'/auth/users'
+  GET_ALL_USERS:'/users/all'
 
 
 });
