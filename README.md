@@ -14,3 +14,8 @@ npm run dev
 settings 
 
 change db credentials in .env
+
+routes
+/
+/login
+/content
