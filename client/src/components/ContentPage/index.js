@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useDispatch } from "react-redux";
 import { actionTypes } from "../../common/enum/action-types.enum";
-import { Button, Divider, Space } from "antd";
+import { Button,  Space } from "antd";
 import "./styles.css";
 
 export const ContentPage = () => {

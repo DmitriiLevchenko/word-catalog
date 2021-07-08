@@ -3,7 +3,6 @@ import { Route, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { appRoute } from "../../../common/enum/app-route.enum";
-import { TokenHelper } from "../../../helpers";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { user } = useSelector((state) => ({

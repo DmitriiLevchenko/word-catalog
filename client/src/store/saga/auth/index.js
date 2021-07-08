@@ -1,8 +1,5 @@
-import axios from "axios";
 import { call, put } from "redux-saga/effects";
-import { httpConstants } from "../../../common/constants/htttp.constants";
 import { actionTypes } from "../../../common/enum/action-types.enum";
-import { endpointEnum } from "../../../common/enum/endpoints.enum";
 import { AuthService } from "../../../services";
 import { TokenHelper } from "../../../helpers";
 
