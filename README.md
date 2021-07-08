@@ -16,6 +16,6 @@ settings
 change db credentials in .env
 
 routes
-/
-/login
-/content
+/;
+/login;
+/content;
